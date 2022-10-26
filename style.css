@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+}
+.parent {
+    display: flex;
+    background-color: aqua;
+    margin-top: 100px;
+}
+.animation1 {
+    width: 300px;
+    height: 300px;
+    background-color: lightgreen;
+    position: relative;
+    animation: sikha 6s ease-in 0s 10 forwards;
+    
+}
+/* 1st type of animation--->sliding pattern */
+
+@keyframes sikha {
+    0% {
+        left: 0px;
+    }
+    50% {
+       /* left: 100vw; -----> will go out of the screen*/
+      left: calc(100vw - 300px);
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+/* 2nd type of animation----->appearing and disappearing pattern */
+
+.animation2 {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    text-align: center;
+    background-color: lightpink;
+    position: relative;
+    animation: bahni 6s ease-in 0s 10 forwards;
+    border-radius: 50%;
+}
+
+@keyframes bahni {
+    0% {
+        height: 0px;
+        width: 0px;
+    }
+    50% {
+        height: 300px;
+        width: 300px;
+    }
+    100% {
+        height: 0px;
+        width: 0px;
+    }
+}
+
+/* 3rd type of animation--->zigzag pattern */
+
+.animation3 {
+    width: 300px;
+    height: 300px;
+    background-color: lightseagreen;
+    margin: 50px;
+    position: relative;
+    animation: Bahnisikha 6s ease-in 0s 10 forwards;
+}
+@keyframes Bahnisikha {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left: calc(100vw - 300px);
+        top: 0px;
+    }
+    50% {
+        top: calc(100vh - 300px);
+        left: 0px;
+    }
+    75% {
+        top: calc(100vh - 300px);
+        left: calc(100vw - 300px);
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
